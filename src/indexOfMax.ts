@@ -3,15 +3,16 @@ export const indexOfMax = (array: number[], except?: number[]): number => {
     return -1
   }
 
-  let tempIndex = 0
-  let tempValue: number | null = null
+  let tempIndex: number = -1
+  let tempValue: number = -1
   for (let index = 0; index < array.length; index++) {
     if (except && except?.indexOf(index) !== -1) {
       continue
     }
     const value = array[index]
-    if (tempValue === null) {
+    if (tempValue === -1) {
       tempValue = value
+      tempIndex = index
     }
     if (value > tempValue) {
       tempValue = value
