@@ -8,6 +8,7 @@ export const indexOfMin = (array: number[]): number => {
   for (let index = 0; index < array.length; index++) {
     const value = array[index]
     if (value < tempValue) {
+      tempValue = value
       tempIndex = index
     }
   }
