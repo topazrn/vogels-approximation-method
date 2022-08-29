@@ -7,12 +7,12 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Debug test",
+      "name": "Debug currently opened file's test",
       "skipFiles": [
         "<node_internals>/**"
       ],
       "runtimeExecutable": "npm",
-      "runtimeArgs": ["run", "test", "--watch"],
+      "runtimeArgs": ["run", "test", "${relativeFileDirname}/${fileBasenameNoExtension}.test.ts", "--watch"],
       "cwd": "${workspaceFolder}",
     }
   ]
