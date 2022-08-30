@@ -63,26 +63,10 @@ test("https://cdn1.byjus.com/wp-content/uploads/2022/04/Vogels-Approximation-Met
 test("https://cdn1.byjus.com/wp-content/uploads/2022/04/Vogels-Approximation-Method-6.png", () => {
   expect(
     penaltyOfMatrix([
-        [2]
-      ])
-    ).toStrictEqual({
+      [2],
+    ])
+  ).toStrictEqual({
     x: [2],
     y: [2],
-  })
-})
-
-test("https://cdn1.byjus.com/wp-content/uploads/2022/04/Vogels-Approximation-Method-3.png", () => {
-  expect(
-    penaltyOfMatrix([
-      [3, 2, 7, 6],
-      [7, 5, 2, 3],
-      [2, 5, 4, 5],
-    ], {
-      x: [1],
-      y: [],
-    })
-  ).toStrictEqual({
-    x: [1, 2, 2],
-    y: [3, 1, 2],
   })
 })

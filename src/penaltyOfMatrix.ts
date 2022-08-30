@@ -5,24 +5,14 @@ export interface Penalty {
   y: number[]
 }
 
-export const penaltyOfMatrix = (matrix: number[][], except?: Penalty): Penalty => {
+export const penaltyOfMatrix = (matrix: number[][]): Penalty => {
   const penalty: Penalty = {
     x: [],
     y: [],
   }
 
   for (let y = 0; y < matrix.length; y++) {
-    if (except && except?.y.indexOf(y) !== -1) {
-      continue
-    }
-    const xs: number[] = []
-    for (let x = 0; x < matrix[y].length; x++) {
-      if (except && except?.x.indexOf(x) !== -1) {
-        continue
-      }
-      const cost = matrix[y][x];
-      xs.push(cost)
-    }
+    const xs = matrix[y]
     const min = indexOfMin(xs)
     const secondMin = indexOfMin(xs, [min])
     const difference = secondMin !== -1 ? xs[secondMin] - xs[min] : xs[min]
@@ -30,14 +20,8 @@ export const penaltyOfMatrix = (matrix: number[][], except?: Penalty): Penalty =
   }
 
   for (let x = 0; x < matrix[0].length; x++) {
-    if (except && except?.x.indexOf(x) !== -1) {
-      continue
-    }
     const ys: number[] = []
     for (let y = 0; y < matrix.length; y++) {
-      if (except && except?.y.indexOf(y) !== -1) {
-        continue
-      }
       const cost = matrix[y][x]
       ys.push(cost)
     }
