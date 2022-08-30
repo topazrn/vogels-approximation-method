@@ -11,24 +11,23 @@ export const penaltyOfMatrix = (matrix: number[][]): Penalty => {
     y: [],
   }
 
-  for (let x = 0; x < matrix.length; x++) {
-    const ys = matrix[x]
-    const min = indexOfMin(ys)
-    const secondMin = indexOfMin(ys, [min])
-    const difference = secondMin !== -1 ? ys[secondMin] - ys[min] : ys[min]
-    penalty.y.push(difference)
-  }
-
-  for (let y = 0; y < matrix[0].length; y++) {
-    const xs: number[] = []
-    for (let x = 0; x < matrix.length; x++) {
-      const cost = matrix[x][y]
-      xs.push(cost)
-    }
-
+  for (let y = 0; y < matrix.length; y++) {
+    const xs = matrix[y]
     const min = indexOfMin(xs)
     const secondMin = indexOfMin(xs, [min])
     const difference = secondMin !== -1 ? xs[secondMin] - xs[min] : xs[min]
+    penalty.y.push(difference)
+  }
+
+  for (let x = 0; x < matrix[0].length; x++) {
+    const ys: number[] = []
+    for (let y = 0; y < matrix.length; y++) {
+      const cost = matrix[y][x]
+      ys.push(cost)
+    }
+    const min = indexOfMin(ys)
+    const secondMin = indexOfMin(ys, [min])
+    const difference = secondMin !== -1 ? ys[secondMin] - ys[min] : ys[min]
     penalty.x.push(difference)
   }
 
