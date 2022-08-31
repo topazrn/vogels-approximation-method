@@ -1,14 +1,22 @@
 {
   "name": "vogels-approximation-method",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "The Vogel's Approximation Method's Calculator",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "./dist"
+  ],
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "build": "tsc"
   },
   "keywords": [],
-  "author": "",
+  "author": "topazrn",
   "license": "ISC",
+  "repository": {
+    "url": "https://github.com/topazrn/vogels-approximation-method"
+  },
   "devDependencies": {
     "@babel/core": "^7.18.13",
     "@babel/preset-env": "^7.18.10",
