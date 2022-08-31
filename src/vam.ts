@@ -1,4 +1,5 @@
-import { stepOfProblem, type Problem, type Step } from "./stepOfProblem"
+import { Problem, Step } from "./types"
+import { stepOfProblem } from "./stepOfProblem"
 import { nextStep } from "./nextStep"
 
 const sum = (array: number[]): number => {

@@ -1,7 +1,7 @@
+import { Problem, Step } from "./types";
 import { indexOfMax } from "./indexOfMax";
 import { indexOfMin } from "./indexOfMin";
 import { penaltyOfMatrix } from "./penaltyOfMatrix";
-import { Problem, Step } from "./stepOfProblem";
 
 export const nextStep = (problem:Problem, step: Step) : Step => {
   step = JSON.parse(JSON.stringify(step))

@@ -1,4 +1,4 @@
-import { Problem, Step } from "./stepOfProblem"
+import { Problem, Step } from "./types"
 import { vam } from "./vam"
 
 test("https://cdn1.byjus.com/wp-content/uploads/2022/04/Vogels-Approximation-Method-2.png", () => {

@@ -1,16 +1,7 @@
-import { Penalty, penaltyOfMatrix } from "./penaltyOfMatrix"
+import { Step, Problem } from "./types";
+import { penaltyOfMatrix } from "./penaltyOfMatrix"
 import { indexOfMax } from "./indexOfMax"
 import { indexOfMin } from "./indexOfMin"
-
-export interface Problem extends Penalty {
-  matrix: number[][]
-}
-
-export interface Step extends Problem {
-  strike: Penalty
-  penalty: Penalty
-  total: string
-}
 
 export const stepOfProblem = (problem: Problem): Step => {
   const step: Step = {

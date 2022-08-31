@@ -1,9 +1,5 @@
+import { Penalty } from "./types";
 import { indexOfMin } from "./indexOfMin"
-
-export interface Penalty {
-  x: number[]
-  y: number[]
-}
 
 export const penaltyOfMatrix = (matrix: number[][], except: Penalty): Penalty => {
   const penalty: Penalty = {

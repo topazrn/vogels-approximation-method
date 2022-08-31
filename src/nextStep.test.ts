@@ -1,5 +1,5 @@
+import { Problem, Step } from "./types";
 import { nextStep } from "./nextStep"
-import { Problem, type Step } from "./stepOfProblem"
 
 test("https://cdn1.byjus.com/wp-content/uploads/2022/04/Vogels-Approximation-Method-3.png", () => {
   const problem: Problem = {
