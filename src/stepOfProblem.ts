@@ -17,10 +17,10 @@ export const stepOfProblem = (problem: Problem): Step => {
     matrix: [],
     x: [...problem.x],
     y: [...problem.y],
-    penalty: penaltyOfMatrix(problem.matrix),
+    penalty: penaltyOfMatrix(problem.matrix, { x: [], y: [] }),
     strike: {
       x: [],
-      y: []
+      y: [],
     },
     total: "",
   }
