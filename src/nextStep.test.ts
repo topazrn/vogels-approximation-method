@@ -38,7 +38,7 @@ test("https://cdn1.byjus.com/wp-content/uploads/2022/04/Vogels-Approximation-Met
     x: [50, 0, 20, 15],
     y: [0, 60, 25],
     penalty: {
-      x: [1, 2, 2],
+      x: [1, 0, 2, 2],
       y: [3, 1, 2],
     },
     strike: {
@@ -87,8 +87,8 @@ test("https://cdn1.byjus.com/wp-content/uploads/2022/04/Vogels-Approximation-Met
     x: [25, 0, 20, 15],
     y: [0, 60, 0],
     penalty: {
-      x: [5, 2, 2],
-      y: [1, 2],
+      x: [5, 0, 2, 2],
+      y: [0, 1, 2],
     },
     strike: {
       x: [1],
