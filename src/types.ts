@@ -10,5 +10,7 @@ export interface Problem extends Penalty {
 export interface Step extends Problem {
   strike: Penalty
   penalty: Penalty
-  total: string
+  calculation1: string
+  calculation2: string
+  total: number
 }

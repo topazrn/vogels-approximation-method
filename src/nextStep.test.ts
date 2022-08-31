@@ -27,7 +27,9 @@ test("https://cdn1.byjus.com/wp-content/uploads/2022/04/Vogels-Approximation-Met
       x: [1],
       y: [],
     },
-    total: "(40 x 2)",
+    calculation1: "(40 x 2)",
+    calculation2: "80",
+    total: 80,
   }
   const output: Step = {
     matrix: [
@@ -45,7 +47,9 @@ test("https://cdn1.byjus.com/wp-content/uploads/2022/04/Vogels-Approximation-Met
       x: [1],
       y: [0],
     },
-    total: "(40 x 2) + (10 x 3)",
+    calculation1: "(40 x 2) + (10 x 3)",
+    calculation2: "80 + 30",
+    total: 110,
   }
   expect(nextStep(problem, input)).toStrictEqual(output)
 })
@@ -76,7 +80,9 @@ test("https://cdn1.byjus.com/wp-content/uploads/2022/04/Vogels-Approximation-Met
       x: [1],
       y: [0],
     },
-    total: "(40 x 2) + (10 x 3)",
+    calculation1: "(40 x 2) + (10 x 3)",
+    calculation2: "80 + 30",
+    total: 110,
   }
   const output: Step = {
     matrix: [
@@ -94,7 +100,9 @@ test("https://cdn1.byjus.com/wp-content/uploads/2022/04/Vogels-Approximation-Met
       x: [1],
       y: [0, 2],
     },
-    total: "(40 x 2) + (10 x 3) + (25 x 2)",
+    calculation1: "(40 x 2) + (10 x 3) + (25 x 2)",
+    calculation2: "80 + 30 + 50",
+    total: 160,
   }
   expect(nextStep(problem, input)).toStrictEqual(output)
 })

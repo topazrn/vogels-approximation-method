@@ -26,7 +26,10 @@ export const nextStep = (problem:Problem, step: Step) : Step => {
     if (step.x[xmax] === 0) {
       step.strike.x.push(xmax)
     }
-    step.total += ` + (${step.matrix[ymin][xmax]} x ${problem.matrix[ymin][xmax]})`
+    step.calculation1 += ` + (${step.matrix[ymin][xmax]} x ${problem.matrix[ymin][xmax]})`
+    const calculation = step.matrix[ymin][xmax] * problem.matrix[ymin][xmax]
+    step.calculation2 += " + " + calculation
+    step.total += calculation
   } else {
     const xmin = indexOfMin(problem.matrix[ymax], step.strike.x)
     const min = Math.min(step.y[ymax], step.x[xmin])
@@ -39,7 +42,10 @@ export const nextStep = (problem:Problem, step: Step) : Step => {
     if (step.x[xmin] === 0) {
       step.strike.x.push(xmin)
     }
-    step.total += ` + (${step.matrix[ymax][xmin]} x ${problem.matrix[ymax][xmin]})`
+    step.calculation1 += ` + (${step.matrix[ymax][xmin]} x ${problem.matrix[ymax][xmin]})`
+    const calculation = step.matrix[ymax][xmin] * problem.matrix[ymax][xmin]
+    step.calculation2 += " + " + calculation
+    step.total += calculation
   }
 
   return step

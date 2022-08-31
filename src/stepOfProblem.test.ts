@@ -1,4 +1,5 @@
-import { stepOfProblem, type Problem, type Step } from "./stepOfProblem"
+import { Problem, Step } from "./types"
+import { stepOfProblem } from "./stepOfProblem"
 
 test("https://cdn1.byjus.com/wp-content/uploads/2022/04/Vogels-Approximation-Method-2.png", () => {
   const problem: Problem = {
@@ -26,7 +27,9 @@ test("https://cdn1.byjus.com/wp-content/uploads/2022/04/Vogels-Approximation-Met
       x: [1],
       y: [],
     },
-    total: "(40 x 2)",
+    calculation1: "(40 x 2)",
+    calculation2: "80",
+    total: 80,
   }
   expect(stepOfProblem(problem)).toStrictEqual(step)
 })
@@ -57,7 +60,9 @@ test("https://businessjargons.com/wp-content/uploads/2015/12/VAM-2.jpg", () => {
       x: [0],
       y: [],
     },
-    total: "(20 x 3)",
+    calculation1: "(20 x 3)",
+    calculation2: "60",
+    total: 60,
   }
   expect(stepOfProblem(problem)).toStrictEqual(step)
 })
