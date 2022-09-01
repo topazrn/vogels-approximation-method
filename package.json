@@ -1,6 +1,6 @@
 {
   "name": "vogels-approximation-method",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "The Vogel's Approximation Method's Calculator",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
