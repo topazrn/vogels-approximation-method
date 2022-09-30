@@ -1,6 +1,6 @@
 # ​​Vogel’s Approximation Method
 
-## Steps
+## Basic Steps
 
 Below are the steps involved in Voge’s approximation method of finding the feasible solution to a transportation problem.
 
@@ -11,3 +11,20 @@ Below are the steps involved in Voge’s approximation method of finding the fea
 3. If the assignment in the previous satisfies the supply at the origin, delete the corresponding row. If it satisfies the demand at that destination, delete the corresponding column.
 
 4. Stop the procedure if supply at each origin is 0, i.e., every supply is exhausted, and demand at each destination is 0, i.e., every demand is satisfying. If not, repeat the above steps, i.e., from step 1.
+
+## Usage
+
+```ts
+import { vam, type Problem, type Step } from "vogels-approximation-method";
+
+const problem: Problem = {
+  matrix: [
+    [3, 2, 7, 6],
+    [7, 5, 2, 3],
+    [2, 5, 4, 5],
+  ],
+  x: [60, 40, 20, 15],
+  y: [50, 60, 25],
+};
+const solution: Solution = vam(problem);
+```
